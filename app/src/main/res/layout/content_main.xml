@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@drawable/g4"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout"
+        android:orientation="horizontal"
+        android:weightSum="3"
+       >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/linearpro"
+            android:layout_weight="1">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/profile"
+            android:src="@drawable/ic_person_outline_black_24dp"
+            />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="40dp"
+            android:src="@drawable/incog"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/stack"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/myfav"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="@string/my_stack"
+            android:textSize="28dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.lorentzos.flingswipe.SwipeFlingAdapterView
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rotation_degrees="15.5" />
+
+    </FrameLayout>
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/newstack"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:elevation="2dp"
+            android:src="@drawable/adding" />
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/del"
+            android:layout_height="50dp"
+            android:elevation="2dp"
+            android:src="@drawable/delete"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/fav"
+            android:layout_height="50dp"
+            android:elevation="2dp"
+            android:src="@drawable/starred1"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/share"
+            android:layout_height="50dp"
+            android:elevation="2dp"
+            android:src="@drawable/sharing1"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    </RelativeLayout>

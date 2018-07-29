@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hfad.layoutprac">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <permission android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".signup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fb"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--<activity
+            android:name=".for_fb"
+            android:label="@string/title_activity_for_fb"
+            android:theme="@style/AppTheme.NoActionBar" />-->
+        <activity
+            android:name=".for_google"
+            android:label="@string/title_activity_for_google"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".for_mobile"
+            android:label="@string/title_activity_for_mobile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Uploadimg"
+            android:label="@string/title_activity_uploadimg"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Myfav"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+    </application>
+
+</manifest>
